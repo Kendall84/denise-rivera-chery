@@ -57,7 +57,13 @@ function iniciar360() {
     slider.max = total - 1;
     mostrar(0);
   };
-  primera.onerror = () => { slider.disabled = true; };
+  primera.onerror = () => {
+    /* Sin fotos reales: se usa el visor 3D ilustrativo */
+    slider.disabled = true;
+    import("./viewer3d.js")
+      .then(m => { m.iniciar3D(viewer, slider, placeholder); })
+      .catch(() => {});
+  };
   primera.src = RUTA_360 + "1.jpg";
 }
 iniciar360();
