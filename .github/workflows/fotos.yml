@@ -1,0 +1,54 @@
+name: traer-fotos
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fotos.yml'
+permissions:
+  contents: write
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar y convertir fotos
+        run: |
+          python3 -m pip install --quiet pillow
+          mkdir -p imagenes
+          B='https://cdn.prod.website-files.com/693117decdf6f4c91bfb67a6'
+          python3 - <<'PY'
+          import io, urllib.request
+          from PIL import Image
+          B = 'https://cdn.prod.website-files.com/693117decdf6f4c91bfb67a6/'
+          fotos = {
+            'exterior-1': '6ab2df06850ca389675df5a5_69bc5911ecb9a99183d30af0__DKS4422-Enhanced-NR-Edit_.webp',
+            'exterior-2': '6ab2df06850ca389675df59b_69bc5910e31cccd8473c16d7__DKS4641_.webp',
+            'exterior-3': '6ab2df06850ca389675df5a0_69bc59105d44ce8e5ba94c6f__DKS4506-Enhanced-NR_.webp',
+            'exterior-4': '6ab2df07850ca389675df5b6_69bc59105775277bb4413581__DKS4659-Enhanced-NR-1_.webp',
+            'interior-1': '6ab2df04850ca389675df532_69bd999541929c80e834e087_1_.webp',
+            'volante': '6ab2df04850ca389675df53d_697a4a630434de0fc9eb0bbe_interior%2520volante.png',
+            'asientos': '6ab2df04850ca389675df54d_694aaa0e7fbd682821f65461_image%2520interior%252003%2520tiggo%25202%2520pro%2520max.png',
+            'tablero': '6ab2df05850ca389675df553_697a4a68c2d91b458527181b_Interior%2520pantalla.png',
+          }
+          for nombre, ruta in fotos.items():
+              req = urllib.request.Request(B + ruta, headers={'User-Agent': 'Mozilla/5.0'})
+              datos = urllib.request.urlopen(req, timeout=60).read()
+              im = Image.open(io.BytesIO(datos))
+              if im.mode in ('RGBA', 'LA', 'P'):
+                  fondo = Image.new('RGB', im.size, (255, 255, 255))
+                  im = im.convert('RGBA')
+                  fondo.paste(im, mask=im.split()[3])
+                  im = fondo
+              else:
+                  im = im.convert('RGB')
+              im.thumbnail((1400, 1400))
+              im.save('imagenes/' + nombre + '.jpg', quality=84, optimize=True)
+              print(nombre, im.size)
+          PY
+      - name: Guardar en el repositorio
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add imagenes
+          git commit -m "Agregar fotos del Tiggo 2 Pro Max" || echo "sin cambios"
+          git push
