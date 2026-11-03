@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="Denise Rivera, asesora de ventas Chery. Conoce el Tiggo 2 Pro Max en 360° y cotiza por WhatsApp.">
+<title>Denise Rivera | Asesora de Ventas Chery</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">DENISE <span>RIVERA</span></div>
+  <nav>
+    <a href="#tiggo2" class="nav-link">Tiggo 2 Pro Max</a>
+    <a href="#modelos" class="nav-link">Modelos</a>
+    <a href="#contacto" class="btn btn-small">Contáctame</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <p class="eyebrow">Asesora de ventas Chery</p>
+    <h1>Estrena tu <span>Chery</span><br>con quien sí te asesora</h1>
+    <p class="lead">Soy Denise Rivera. Te acompaño desde que eliges tu carro hasta que sales manejándolo.</p>
+    <div class="hero-actions">
+      <a class="btn wa" data-wa data-msg="Hola Denise, me interesa un Chery" href="#contacto" target="_blank" rel="noopener noreferrer">Escríbeme por WhatsApp</a>
+      <a class="btn ghost" href="#tiggo2">Ver el Tiggo 2 Pro Max en 360°</a>
+    </div>
+  </div>
+
+  <section id="tiggo2">
+    <h2>Tiggo 2 Pro Max en 360°</h2>
+    <p class="sub">Arrastra con el dedo o el mouse para girarlo</p>
+    <div class="viewer-wrap">
+      <div id="viewer" aria-label="Visor 360 grados del Tiggo 2 Pro Max">
+        <div id="placeholder">
+          <div class="big">🚗</div>
+          <b>Aquí aparecerá el giro 360° del Tiggo 2 Pro Max</b>
+          <small>Sube las fotos a la carpeta <code>360/</code> como 1.jpg, 2.jpg, 3.jpg…</small>
+        </div>
+      </div>
+      <input id="rot" class="slider" type="range" min="0" max="35" value="0" aria-label="Girar el carro">
+      <div class="hint">↔ Desliza para ver todos los ángulos</div>
+    </div>
+    <div class="specs">
+      <div class="spec"><b>1.5 L</b>Motor</div>
+      <div class="spec"><b>9"</b>Pantalla táctil</div>
+      <div class="spec"><b>4</b>Airbags</div>
+      <div class="spec"><b>Manual / Auto</b>Transmisión</div>
+    </div>
+    <p class="note">Especificaciones de referencia; pregúntale a Denise por la versión y el precio disponibles.</p>
+  </section>
+
+  <section>
+    <h2>Por dentro y por fuera</h2>
+    <p class="sub">Interior, tablero, pantalla, asientos y más</p>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section id="modelos">
+    <h2>Más modelos Chery</h2>
+    <p class="sub">Pronto cada uno con su propio visor 360°</p>
+    <div class="models">
+      <div class="card"><span class="tag">DISPONIBLE</span><h3>Tiggo 2 Pro Max</h3><p>SUV compacto urbano, moderno y económico.</p><a class="btn btn-small mt" href="#tiggo2">Ver en 360°</a></div>
+      <div class="card"><span class="tag">PRÓXIMAMENTE</span><h3>Tiggo 4</h3><p>Más espacio y tecnología para la familia.</p><div class="soon">Visor 360° en camino</div></div>
+      <div class="card"><span class="tag">PRÓXIMAMENTE</span><h3>Más modelos</h3><p>Pregúntame por todo el catálogo Chery.</p><div class="soon">Visor 360° en camino</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact" id="contacto">
+      <h2>¿Cuál Chery va contigo?</h2>
+      <p>Déjame tus datos o escríbeme directo. Te respondo lo antes posible.</p>
+      <a class="btn wa" data-wa data-msg="Hola Denise, quiero cotizar un Chery" href="#contacto" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
+      <form id="form" novalidate>
+        <label class="sr" for="n">Tu nombre</label>
+        <input id="n" name="nombre" placeholder="Tu nombre" maxlength="60" autocomplete="name" required>
+        <label class="sr" for="m">Modelo</label>
+        <select id="m" name="modelo"><option>Tiggo 2 Pro Max</option><option>Tiggo 4</option><option>Otro modelo</option></select>
+        <label class="sr" for="msg">Mensaje</label>
+        <textarea id="msg" name="mensaje" rows="3" maxlength="300" placeholder="¿Qué te gustaría saber?"></textarea>
+        <p id="error" class="error" role="alert"></p>
+        <button type="submit" class="btn white">Enviar a Denise por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Denise Rivera · Asesora de ventas Chery</footer>
+<a class="float-wa" data-wa data-msg="Hola Denise" href="#contacto" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="Escribir por WhatsApp">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
