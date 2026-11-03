@@ -7,10 +7,14 @@ const WHATSAPP = "506XXXXXXXX";
 const CANTIDAD_FOTOS = 36;
 const RUTA_360 = "360/";
 const GALERIA = [
+  { archivo: "imagenes/exterior-1.jpg", texto: "Exterior" },
   { archivo: "imagenes/interior-1.jpg", texto: "Interior" },
-  { archivo: "imagenes/tablero.jpg",    texto: "Tablero y pantalla" },
+  { archivo: "imagenes/tablero.jpg",    texto: "Pantalla de infoentretenimiento" },
   { archivo: "imagenes/asientos.jpg",   texto: "Asientos" },
-  { archivo: "imagenes/exterior.jpg",   texto: "Exterior" }
+  { archivo: "imagenes/volante.jpg",    texto: "Volante multifunción" },
+  { archivo: "imagenes/exterior-2.jpg", texto: "Exterior" },
+  { archivo: "imagenes/exterior-3.jpg", texto: "Exterior" },
+  { archivo: "imagenes/exterior-4.jpg", texto: "Exterior" }
 ];
 /* ===================================================================== */
 
