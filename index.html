@@ -3,114 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'; frame-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="theme-color" content="#c8102e">
-<meta name="description" content="Denise Rivera, asesora de ventas Chery en Costa Rica. Conoce el Tiggo 2 Pro Max en 360° y cotiza por WhatsApp.">
-<title>Denise Rivera | Asesora de ventas Chery</title>
+<meta name="theme-color" content="#0f1217">
+<title>Denise Rivera | Asesora de ventas Chery en Costa Rica</title>
+<meta name="description" content="Conoce los 10 modelos Chery, iCAR e iCAUR con fotos y fichas por versión. Cotiza por WhatsApp con Denise Rivera, asesora de ventas.">
+<link rel="canonical" href="https://kendall84.github.io/denise-rivera-chery/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CR">
+<meta property="og:title" content="Denise Rivera | Asesora de ventas Chery">
+<meta property="og:description" content="10 modelos Chery, iCAR e iCAUR con fotos y fichas por versión. Cotiza por WhatsApp.">
+<meta property="og:image" content="https://kendall84.github.io/denise-rivera-chery/img/modelos/tiggo-8-pro/exterior-frente-1200.jpg">
+<meta property="og:url" content="https://kendall84.github.io/denise-rivera-chery/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Denise Rivera | Asesora de ventas Chery">
+<meta name="twitter:description" content="10 modelos Chery, iCAR e iCAUR con fotos y fichas por versión. Cotiza por WhatsApp.">
+<meta name="twitter:image" content="https://kendall84.github.io/denise-rivera-chery/img/modelos/tiggo-8-pro/exterior-frente-1200.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Denise Rivera","jobTitle":"Asesora de ventas Chery","url":"https://kendall84.github.io/denise-rivera-chery/","knowsAbout":["Chery","iCAR","iCAUR"],"areaServed":{"@type":"Country","name":"Costa Rica"}}
+</script>
 </head>
-<body>
+<body data-pagina="inicio">
 
 <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+<p id="aviso" class="aviso" role="status" hidden></p>
 
 <header class="top">
-  <a class="logo" href="#inicio" aria-label="Denise Rivera, inicio">
+  <a class="logo" href="./" aria-label="Denise Rivera, inicio">
     <span class="logo-mark" aria-hidden="true">DR</span>
     <span class="logo-text">Denise Rivera<small data-i18n="logoSub">Asesora de ventas Chery</small></span>
   </a>
   <nav class="nav" aria-label="Principal" data-i18n-aria="navLabel">
-    <a href="#tiggo2" data-i18n="navTiggo">Tiggo 2 Pro Max</a>
-    <a href="#galeria" data-i18n="navGaleria">Fotos</a>
     <a href="#modelos" data-i18n="navModelos">Modelos</a>
+    <a href="#tecnologia" data-i18n="navTecnologia">Tecnología</a>
+    <a href="#denise" data-i18n="navDenise">Sobre Denise</a>
     <a href="#contacto" class="nav-cta" data-i18n="navContacto">Contáctame</a>
   </nav>
   <div class="lang" role="group" aria-label="Idioma / Language">
-    <button type="button" class="lang-btn" data-lang="es" aria-pressed="true" lang="es">Español</button>
-    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" lang="en">English</button>
+    <button type="button" class="lang-btn" data-lang="es" aria-pressed="true" lang="es">ES</button>
+    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" lang="en">EN</button>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero" id="inicio">
-    <div class="hero-text">
-      <h1 data-i18n="heroTitle">Tu próximo Chery, con alguien que te acompaña de verdad</h1>
-      <p class="lead" data-i18n="heroLead">Soy Denise Rivera, asesora de ventas Chery. Te ayudo a escoger el modelo, a coordinar la prueba de manejo y a resolver el financiamiento, hasta que salgas manejando.</p>
+  <section class="hero">
+    <picture class="hero-bg">
+      <source type="image/webp" srcset="img/modelos/tiggo-8-pro/exterior-frente-640.webp 640w, img/modelos/tiggo-8-pro/exterior-frente-1200.webp 1200w, img/modelos/tiggo-8-pro/exterior-frente-1920.webp 1920w" sizes="100vw">
+      <img src="img/modelos/tiggo-8-pro/exterior-frente-1200.jpg" width="2746" height="1744" alt="Chery Tiggo 8 Pro negro en una avenida de la ciudad" data-i18n-alt="heroAlt" fetchpriority="high" decoding="async">
+    </picture>
+    <div class="hero-inner">
+      <h1 data-i18n="heroTitle">Encuentra tu Chery con asesoría de verdad</h1>
+      <p class="lead" data-i18n="heroLead">SUV a gasolina, eléctricos, un híbrido de rango extendido y una pickup 4x4. Te ayudo a comparar versiones, coordinar la prueba de manejo y resolver el financiamiento.</p>
       <div class="hero-actions">
-        <a class="btn btn-wa" data-wa data-i18n-msg="msgHero" href="#contacto" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-wa" data-wa data-wa-msg="msgGeneral" href="#contacto" target="_blank" rel="noopener noreferrer">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
           <span data-i18n="ctaWhatsapp">Escríbeme por WhatsApp</span>
         </a>
-        <a class="btn btn-ghost" href="#tiggo2" data-i18n="ctaVer">Ver el Tiggo 2 Pro Max</a>
+        <a class="btn btn-ghost" href="#modelos" data-i18n="ctaModelos">Ver modelos</a>
       </div>
-      <ul class="trust">
-        <li data-i18n="trust1">Asesoría personalizada</li>
-        <li data-i18n="trust2">Prueba de manejo coordinada</li>
-        <li data-i18n="trust3">Ayuda con el financiamiento</li>
-      </ul>
     </div>
-    <figure class="hero-photo">
-      <img src="imagenes/exterior-1.jpg" width="1400" height="933" alt="Chery Tiggo 2 Pro Max rojo estacionado en una calle soleada" data-i18n-alt="heroAlt" fetchpriority="high">
-      <figcaption>Tiggo 2 Pro Max</figcaption>
-    </figure>
-  </section>
-
-  <section class="block" id="tiggo2">
-    <div class="block-head">
-      <h2 data-i18n="t2Title">Tiggo 2 Pro Max, por todos lados</h2>
-      <p data-i18n="t2Sub">Arrastra con el dedo o el mouse para girarlo.</p>
-    </div>
-    <div class="viewer-wrap">
-      <div id="viewer" aria-label="Visor 360 grados del Tiggo 2 Pro Max" data-i18n-aria="viewerAria">
-        <div id="placeholder">
-          <b data-i18n="viewerLoading">Cargando visor…</b>
-        </div>
-      </div>
-      <label class="sr" for="rot" data-i18n="sliderLabel">Girar el carro</label>
-      <input id="rot" class="slider" type="range" min="0" max="35" value="0">
-    </div>
-    <dl class="specs">
-      <div class="spec"><dt data-i18n="specMotor">Motor</dt><dd>1.5 L</dd></div>
-      <div class="spec"><dt data-i18n="specPantalla">Pantalla táctil</dt><dd>9"</dd></div>
-      <div class="spec"><dt data-i18n="specAirbags">Bolsas de aire</dt><dd>4</dd></div>
-      <div class="spec"><dt data-i18n="specTrans">Transmisión</dt><dd data-i18n="specTransVal">Manual o automática</dd></div>
-    </dl>
-    <p class="note" data-i18n="specNote">Especificaciones de referencia. Pregúntale a Denise por la versión y el precio disponibles.</p>
-  </section>
-
-  <section class="block block-alt" id="galeria">
-    <div class="block-head">
-      <h2 data-i18n="galTitle">Por dentro y por fuera</h2>
-      <p data-i18n="galSub">El tablero, la pantalla, los asientos y el maletero, de cerca.</p>
-    </div>
-    <div class="gallery" id="gallery"></div>
+    <ul class="trust">
+      <li data-i18n="trust1">Asesora de ventas Chery</li>
+      <li data-i18n="trust2">Garantía de hasta 10 años en motor (Tiggo 2, 4, 7 Pro y 8 Pro)</li>
+      <li data-i18n="trust3">Atención personalizada</li>
+    </ul>
   </section>
 
   <section class="block" id="modelos">
     <div class="block-head">
-      <h2 data-i18n="modTitle">Más modelos Chery</h2>
-      <p data-i18n="modSub">Muy pronto vas a poder ver cada modelo con fotos y datos completos.</p>
+      <h2 data-i18n="catTitle">Modelos</h2>
+      <p data-i18n="catSub">10 modelos con fotos oficiales y datos de la ficha técnica de cada versión.</p>
     </div>
-    <div class="models">
-      <article class="card card-main">
-        <span class="tag tag-on" data-i18n="tagDisponible">Ya en la página</span>
-        <h3>Tiggo 2 Pro Max</h3>
-        <p data-i18n="card1">SUV compacto para la ciudad: moderno, cómodo y económico.</p>
-        <a class="link" href="#tiggo2" data-i18n="card1Btn">Verlo en 360°</a>
-      </article>
-      <article class="card">
-        <span class="tag" data-i18n="tagPronto">Próximamente</span>
-        <h3>Tiggo 4</h3>
-        <p data-i18n="card2">Más espacio y tecnología para la familia.</p>
-        <a class="link" data-wa data-i18n-msg="msgTiggo4" href="#contacto" target="_blank" rel="noopener noreferrer" data-i18n="cardAsk">Preguntarle a Denise</a>
-      </article>
-      <article class="card">
-        <span class="tag" data-i18n="tagPronto">Próximamente</span>
-        <h3 data-i18n="card3Title">Todo el catálogo</h3>
-        <p data-i18n="card3">SUV a gasolina, eléctricos, híbridos y pickup. Pregúntame por el que te interesa.</p>
-        <a class="link" data-wa data-i18n-msg="msgCatalogo" href="#contacto" target="_blank" rel="noopener noreferrer" data-i18n="cardAsk">Preguntarle a Denise</a>
-      </article>
+    <div class="filtros" role="group" aria-label="Filtrar por tipo" data-i18n-aria="filtroLabel">
+      <button type="button" class="chip" data-filtro="todos" aria-pressed="true" data-i18n="fTodos">Todos</button>
+      <button type="button" class="chip" data-filtro="gasolina" aria-pressed="false" data-i18n="fGasolina">SUV a gasolina</button>
+      <button type="button" class="chip" data-filtro="electrico" aria-pressed="false" data-i18n="fElectrico">Eléctricos</button>
+      <button type="button" class="chip" data-filtro="hibrido" aria-pressed="false" data-i18n="fHibrido">Híbrido</button>
+      <button type="button" class="chip" data-filtro="pickup" aria-pressed="false" data-i18n="fPickup">Pickup</button>
+    </div>
+    <div class="catalogo" id="catalogo" aria-live="polite"></div>
+  </section>
+
+  <section class="block block-alt" id="tecnologia">
+    <div class="block-head">
+      <h2 data-i18n="techTitle">Tecnología y seguridad</h2>
+      <p data-i18n="techSub">Lo más fuerte de la línea, según las fichas técnicas.</p>
+    </div>
+    <div class="tech">
+      <article><h3 data-i18n="tech1T">5 estrellas de seguridad</h3><p data-i18n="tech1D"></p></article>
+      <article><h3 data-i18n="tech2T">Asistencias de manejo (ADAS)</h3><p data-i18n="tech2D"></p></article>
+      <article><h3 data-i18n="tech3T">Carga rápida</h3><p data-i18n="tech3D"></p></article>
+      <article><h3 data-i18n="tech4T">Hasta 1000 km</h3><p data-i18n="tech4D"></p></article>
+      <article><h3 data-i18n="tech5T">Techo panorámico</h3><p data-i18n="tech5D"></p></article>
+      <article><h3 data-i18n="tech6T">Garantía de motor</h3><p data-i18n="tech6D"></p></article>
+    </div>
+  </section>
+
+  <section class="block" id="angulos">
+    <div class="block-head">
+      <h2><span data-i18n="visorTitle">Míralo desde varios ángulos</span>: Tiggo 2 Pro Max</h2>
+    </div>
+    <div class="visor" id="visor"></div>
+    <p class="visor-link"><a class="link" href="modelo.html?m=tiggo-2-pro-max" data-i18n="verDetalle">Ver detalle</a></p>
+  </section>
+
+  <section class="block block-alt" id="denise">
+    <div class="denise">
+      <div class="denise-foto" id="denise-foto" aria-hidden="true"></div>
+      <div class="denise-texto">
+        <h2 data-i18n="denTitle">Sobre Denise</h2>
+        <p class="lead" data-i18n="denLead"></p>
+        <dl class="denise-datos" id="denise-datos" hidden></dl>
+        <ul class="denise-items">
+          <li><strong data-i18n="denItem1T">Asesoría</strong><span data-i18n="denItem1D"></span></li>
+          <li><strong data-i18n="denItem2T">Prueba de manejo</strong><span data-i18n="denItem2D"></span></li>
+          <li><strong data-i18n="denItem3T">Trámite</strong><span data-i18n="denItem3D"></span></li>
+          <li><strong data-i18n="denItem4T">Entrega</strong><span data-i18n="denItem4D"></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="comprar">
+    <div class="block-head"><h2 data-i18n="comprarTitle">Cómo comprar tu Chery</h2></div>
+    <ol class="pasos">
+      <li><h3 data-i18n="paso1T">Elige tu modelo</h3><p data-i18n="paso1D"></p></li>
+      <li><h3 data-i18n="paso2T">Prueba de manejo</h3><p data-i18n="paso2D"></p></li>
+      <li><h3 data-i18n="paso3T">Financiamiento o forma de pago</h3><p data-i18n="paso3D"></p></li>
+      <li><h3 data-i18n="paso4T">Entrega</h3><p data-i18n="paso4D"></p></li>
+    </ol>
+  </section>
+
+  <section class="block block-alt" id="faq">
+    <div class="block-head"><h2 data-i18n="faqTitle">Preguntas frecuentes</h2></div>
+    <div class="faq">
+      <details><summary data-i18n="faq1P">¿Dónde veo el precio?</summary><p data-i18n="faq1R"></p></details>
+      <details><summary data-i18n="faq2P">¿Qué garantía tienen?</summary><p data-i18n="faq2R"></p></details>
+      <details><summary data-i18n="faq3P">¿Puedo hacer una prueba de manejo?</summary><p data-i18n="faq3R"></p></details>
+      <details><summary data-i18n="faq4P">¿Cuál es la diferencia entre CLTC y NEDC?</summary><p data-i18n="faq4R"></p></details>
+      <details><summary data-i18n="faq5P">¿Este es el sitio oficial de Chery?</summary><p data-i18n="faq5R"></p></details>
     </div>
   </section>
 
@@ -118,17 +152,14 @@
     <div class="contact">
       <div class="contact-text">
         <h2 data-i18n="ctTitle">¿Cuál Chery va contigo?</h2>
-        <p data-i18n="ctSub">Déjame tu nombre y lo que buscas. El mensaje se abre en WhatsApp para que me lo envíes directo.</p>
+        <p data-i18n="ctSub"></p>
+        <a class="btn btn-wa btn-lg" data-wa data-wa-msg="msgGeneral" href="#contacto" target="_blank" rel="noopener noreferrer" data-i18n="ctaWhatsapp">Escríbeme por WhatsApp</a>
       </div>
       <form id="form" novalidate>
         <label for="n" data-i18n="fNombre">Tu nombre</label>
         <input id="n" name="nombre" maxlength="60" autocomplete="name" required>
         <label for="m" data-i18n="fModelo">Modelo que te interesa</label>
-        <select id="m" name="modelo">
-          <option value="Tiggo 2 Pro Max">Tiggo 2 Pro Max</option>
-          <option value="Tiggo 4">Tiggo 4</option>
-          <option value="otro" data-i18n="fOtro">Otro modelo</option>
-        </select>
+        <select id="m" name="modelo"></select>
         <label for="msg" data-i18n="fMensaje">¿Qué te gustaría saber? (opcional)</label>
         <textarea id="msg" name="mensaje" rows="3" maxlength="300"></textarea>
         <p id="error" class="error" role="alert"></p>
@@ -140,14 +171,20 @@
 
 <footer class="foot">
   <p data-i18n="footer1">© 2026 Denise Rivera · Asesora de ventas Chery en Costa Rica.</p>
-  <p class="foot-small" data-i18n="footer2">Sitio independiente de Denise Rivera. No es la página oficial de Chery ni de sus distribuidores. Imágenes de referencia.</p>
+  <p class="foot-small" data-i18n="footer2"></p>
 </footer>
 
-<a class="float-wa" data-wa data-i18n-msg="msgFloat" href="#contacto" target="_blank" rel="noopener noreferrer" aria-label="Escribir a Denise por WhatsApp" data-i18n-aria="floatAria">
+<a class="float-wa" data-wa data-wa-msg="msgFloat" href="#contacto" target="_blank" rel="noopener noreferrer" aria-label="Escribir a Denise por WhatsApp" data-i18n-aria="floatAria">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
 </a>
+<nav class="barra-movil" aria-label="Contacto rápido">
+  <a href="#modelos" data-i18n="navModelos">Modelos</a>
+  <a class="barra-wa" data-wa data-wa-msg="msgGeneral" href="#contacto" target="_blank" rel="noopener noreferrer" data-i18n="barCotizar">Cotizar</a>
+</nav>
 
-<script src="i18n.js"></script>
-<script src="script.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/visor360.js"></script>
+<script src="js/catalogo.js"></script>
 </body>
 </html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'; frame-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#0f1217">
+<title>Modelo | Denise Rivera, asesora Chery</title>
+<meta name="description" content="Ficha del modelo con datos por versión, equipamiento, colores y galería. Cotiza por WhatsApp con Denise Rivera.">
+<link rel="canonical" href="https://kendall84.github.io/denise-rivera-chery/modelo.html">
+<meta property="og:type" content="product">
+<meta property="og:locale" content="es_CR">
+<meta property="og:title" content="Modelo | Denise Rivera, asesora Chery">
+<meta property="og:description" content="Ficha del modelo con datos por versión, equipamiento, colores y galería.">
+<meta property="og:image" content="https://kendall84.github.io/denise-rivera-chery/img/modelos/tiggo-8-pro/exterior-frente-1200.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Modelo | Denise Rivera, asesora Chery">
+<meta name="twitter:description" content="Ficha del modelo con datos por versión, equipamiento, colores y galería.">
+<meta name="twitter:image" content="https://kendall84.github.io/denise-rivera-chery/img/modelos/tiggo-8-pro/exterior-frente-1200.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-pagina="modelo">
+
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+<p id="aviso" class="aviso" role="status" hidden></p>
+
+<header class="top">
+  <a class="logo" href="./" aria-label="Denise Rivera, inicio">
+    <span class="logo-mark" aria-hidden="true">DR</span>
+    <span class="logo-text">Denise Rivera<small data-i18n="logoSub">Asesora de ventas Chery</small></span>
+  </a>
+  <nav class="nav" aria-label="Principal" data-i18n-aria="navLabel">
+    <a href="./#modelos" data-i18n="navModelos">Modelos</a>
+    <a href="./#denise" data-i18n="navDenise">Sobre Denise</a>
+    <a href="./#contacto" class="nav-cta" data-i18n="navContacto">Contáctame</a>
+  </nav>
+  <div class="lang" role="group" aria-label="Idioma / Language">
+    <button type="button" class="lang-btn" data-lang="es" aria-pressed="true" lang="es">ES</button>
+    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" lang="en">EN</button>
+  </div>
+</header>
+
+<main id="main">
+  <div id="no-encontrado" class="block no-encontrado" hidden>
+    <h1 data-i18n="noEncontrado">No encontramos ese modelo.</h1>
+    <p><a class="btn btn-ghost" href="./#modelos" data-i18n="volver">Todos los modelos</a></p>
+  </div>
+
+  <div id="contenido-modelo">
+    <section class="m-hero">
+      <div class="m-hero-media" id="modelo-hero-media"></div>
+      <div class="m-hero-inner">
+        <p class="crumb"><a class="link" href="./#modelos">← <span data-i18n="volver">Todos los modelos</span></a></p>
+        <span id="modelo-tag" class="tag"></span>
+        <h1 id="modelo-nombre">Modelo</h1>
+        <p id="modelo-tipo" class="m-tipo"></p>
+        <p class="m-precio" data-i18n="precio">Consulta precio y financiamiento con Denise</p>
+        <div class="hero-actions">
+          <a class="btn btn-wa" data-wa data-wa-modelo-actual data-wa-msg="msgModelo" href="#contacto" target="_blank" rel="noopener noreferrer" data-i18n="cotizarModelo">Cotizar este modelo</a>
+          <a class="btn btn-ghost" href="#galeria" data-i18n="secGaleria">Galería</a>
+        </div>
+      </div>
+    </section>
+
+    <nav class="subnav" aria-label="Secciones">
+      <a href="#resumen" data-i18n="secResumen">Resumen</a>
+      <a href="#motor" data-i18n="secMotor">Motor y desempeño</a>
+      <a href="#seguridad" data-i18n="secSeguridad">Seguridad y ADAS</a>
+      <a href="#interior" data-i18n="secInterior">Interior y tecnología</a>
+      <a href="#exterior" data-i18n="secExterior">Exterior</a>
+      <a href="#dimensiones" data-i18n="secDimensiones">Dimensiones</a>
+      <a href="#galeria" data-i18n="secGaleria">Galería</a>
+    </nav>
+
+    <section class="block" id="resumen">
+      <div class="block-head">
+        <h2 data-i18n="secResumen">Resumen</h2>
+        <p id="modelo-resumen"></p>
+      </div>
+      <dl class="cifras" id="cifras"></dl>
+      <div class="version-box">
+        <div class="version-head">
+          <h3 id="datos-version-titulo" data-i18n="datosVersion">Datos de la versión</h3>
+          <div class="seg" id="versiones" role="group" aria-label="Elige la versión" data-i18n-aria="elegirVersion"></div>
+        </div>
+        <dl class="ficha" id="datos-version"></dl>
+      </div>
+      <dl class="ficha garantia" id="garantia" hidden></dl>
+    </section>
+
+    <section class="block block-alt" id="angulos-modelo">
+      <div class="block-head"><h2 data-i18n="secAngulos">Vista por ángulos</h2></div>
+      <div class="visor" id="visor"></div>
+    </section>
+
+    <section class="block equipo">
+      <div class="eq-grid">
+        <div class="eq-col" id="motor"><h2 data-i18n="secMotor">Motor y desempeño</h2><ul class="eq-list" id="eq-motor"></ul></div>
+        <div class="eq-col" id="seguridad"><h2 data-i18n="secSeguridad">Seguridad y ADAS</h2><ul class="eq-list" id="eq-seguridad"></ul></div>
+        <div class="eq-col" id="interior"><h2 data-i18n="secInterior">Interior y tecnología</h2><ul class="eq-list" id="eq-interior"></ul></div>
+        <div class="eq-col" id="exterior"><h2 data-i18n="secExterior">Exterior</h2><ul class="eq-list" id="eq-exterior"></ul></div>
+      </div>
+    </section>
+
+    <section class="block block-alt" id="dimensiones">
+      <div class="dim-colores">
+        <div>
+          <h2 data-i18n="secDimensiones">Dimensiones</h2>
+          <dl class="ficha" id="dimensiones-lista"></dl>
+        </div>
+        <div id="bloque-colores">
+          <h2 data-i18n="secColores">Colores disponibles</h2>
+          <ul class="colores" id="colores"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="galeria">
+      <div class="block-head"><h2 data-i18n="secGaleria">Galería</h2></div>
+      <div class="galeria" id="galeria-grid"></div>
+    </section>
+
+    <section class="block block-alt cta-final">
+      <h2 data-i18n="precio">Consulta precio y financiamiento con Denise</h2>
+      <a class="btn btn-wa btn-lg" data-wa data-wa-modelo-actual data-wa-msg="msgModelo" href="#contacto" target="_blank" rel="noopener noreferrer" data-i18n="cotizarModelo">Cotizar este modelo</a>
+      <p class="pie-modelo" id="pie-modelo"></p>
+    </section>
+
+    <section class="block" id="otros">
+      <div class="block-head"><h2 data-i18n="secRelacionados">También te puede interesar</h2></div>
+      <div class="relacionados" id="relacionados"></div>
+    </section>
+  </div>
+</main>
+
+<dialog id="lightbox" class="lightbox" aria-label="Galería">
+  <button type="button" id="lb-cerrar" class="lb-btn lb-cerrar" aria-label="Cerrar" data-i18n-aria="cerrar">×</button>
+  <button type="button" id="lb-prev" class="lb-btn lb-prev" aria-label="Foto anterior" data-i18n-aria="anterior">‹</button>
+  <figure>
+    <div id="lb-media" class="lb-media"></div>
+    <figcaption id="lb-caption"></figcaption>
+  </figure>
+  <button type="button" id="lb-next" class="lb-btn lb-next" aria-label="Foto siguiente" data-i18n-aria="siguiente">›</button>
+</dialog>
+
+<footer class="foot">
+  <p data-i18n="footer1">© 2026 Denise Rivera · Asesora de ventas Chery en Costa Rica.</p>
+  <p class="foot-small" data-i18n="footer2"></p>
+</footer>
+
+<a class="float-wa" data-wa data-wa-modelo-actual data-wa-msg="msgModelo" href="#contacto" target="_blank" rel="noopener noreferrer" aria-label="Escribir a Denise por WhatsApp" data-i18n-aria="floatAria">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg>
+</a>
+<nav class="barra-movil" aria-label="Contacto rápido">
+  <a href="./#modelos" data-i18n="navModelos">Modelos</a>
+  <a class="barra-wa" data-wa data-wa-modelo-actual data-wa-msg="msgModelo" href="#contacto" target="_blank" rel="noopener noreferrer" data-i18n="barCotizar">Cotizar</a>
+</nav>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/visor360.js"></script>
+<script src="js/modelo.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kendall84.github.io/denise-rivera-chery/sitemap.xml
