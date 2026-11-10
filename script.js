@@ -2,30 +2,42 @@
    1) WHATSAPP: número de Denise con código de país, sin + ni espacios.
       Costa Rica = 506 + 8 dígitos. Ejemplo: "50688881234"
    2) Fotos del 360: carpeta 360/ con 1.jpg, 2.jpg ... (CANTIDAD_FOTOS en total).
-   3) Fotos de galería: carpeta imagenes/ con los nombres de GALERIA.        */
+   3) Fotos de galería: carpeta imagenes/ con los nombres de GALERIA.
+      "texto" es la clave del pie de foto en i18n.js.                     */
 const WHATSAPP = "506XXXXXXXX";
 const CANTIDAD_FOTOS = 36;
 const RUTA_360 = "360/";
 const GALERIA = [
-  { archivo: "imagenes/exterior-1.jpg", texto: "Exterior" },
-  { archivo: "imagenes/interior-1.jpg", texto: "Interior" },
-  { archivo: "imagenes/tablero.jpg",    texto: "Pantalla de infoentretenimiento" },
-  { archivo: "imagenes/asientos.jpg",   texto: "Asientos" },
-  { archivo: "imagenes/volante.jpg",    texto: "Volante multifunción" },
-  { archivo: "imagenes/exterior-2.jpg", texto: "Exterior" },
-  { archivo: "imagenes/exterior-3.jpg", texto: "Exterior" },
-  { archivo: "imagenes/exterior-4.jpg", texto: "Exterior" }
+  { archivo: "imagenes/interior-1.jpg", texto: "gInterior", area: "g-int",     ancho: 1400, alto: 933 },
+  { archivo: "imagenes/tablero.jpg",    texto: "gPantalla", area: "g-pan",     ancho: 800,  alto: 800 },
+  { archivo: "imagenes/volante.jpg",    texto: "gVolante", area: "g-vol",      ancho: 800,  alto: 800 },
+  { archivo: "imagenes/exterior-2.jpg", texto: "gInstrumentos", area: "g-ins", ancho: 933,  alto: 1400 },
+  { archivo: "imagenes/asientos.jpg",   texto: "gAsientos", area: "g-asi",     ancho: 800,  alto: 600 },
+  { archivo: "imagenes/exterior-4.jpg", texto: "gMaletero", area: "g-mal",     ancho: 1400, alto: 933 },
+  { archivo: "imagenes/exterior-3.jpg", texto: "gEnMovimiento", area: "g-ext", ancho: 1400, alto: 788 }
 ];
 /* ===================================================================== */
 
+const t = clave => window.I18N.t(clave);
 const numeroValido = /^\d{8,15}$/.test(WHATSAPP);
 
-/* Enlaces de WhatsApp (todos salen de este único número) */
+/* ---------- WhatsApp (todos los enlaces salen de este único número) ---------- */
 function linkWA(texto) {
   return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto);
 }
+function actualizarEnlacesWA() {
+  document.querySelectorAll("[data-wa]").forEach(a => {
+    a.href = numeroValido ? linkWA(t(a.dataset.i18nMsg || "msgFloat")) : "#contacto";
+  });
+}
+/* Si el número no está configurado, los botones llevan al formulario y avisan */
 document.querySelectorAll("[data-wa]").forEach(a => {
-  if (numeroValido) a.href = linkWA(a.dataset.msg || "Hola Denise");
+  a.addEventListener("click", e => {
+    if (numeroValido) return;
+    e.preventDefault();
+    document.getElementById("contacto").scrollIntoView({ behavior: "smooth" });
+    error.textContent = t("errNumero");
+  });
 });
 
 /* ---------- Visor 360 ---------- */
@@ -48,7 +60,7 @@ function iniciar360() {
     for (let i = 1; i <= CANTIDAD_FOTOS; i++) {
       const im = new Image();
       im.src = RUTA_360 + i + ".jpg";
-      im.alt = "Tiggo 2 Pro Max, ángulo " + i;
+      im.alt = t("angulo") + " " + i;
       im.draggable = false;
       viewer.appendChild(im);
       frames.push(im);
@@ -61,7 +73,7 @@ function iniciar360() {
     /* Sin fotos reales: se usa el visor 3D ilustrativo */
     slider.disabled = true;
     import("./viewer3d.js")
-      .then(m => { m.iniciar3D(viewer, slider, placeholder); })
+      .then(m => { m.iniciar3D(viewer, slider, placeholder, t("badge3d")); })
       .catch(() => {});
   };
   primera.src = RUTA_360 + "1.jpg";
@@ -82,33 +94,48 @@ viewer.addEventListener("touchmove", e => mov(e.touches[0].clientX), { passive: 
 viewer.addEventListener("touchend", fin);
 slider.addEventListener("input", () => mostrar(Number(slider.value)));
 
-/* ---------- Galería (usa la foto si existe, si no deja el espacio) ---------- */
+/* ---------- Galería ---------- */
 const galeria = document.getElementById("gallery");
 GALERIA.forEach(item => {
-  const caja = document.createElement("div");
-  caja.className = "shot";
-  caja.textContent = "Foto: " + item.texto;
-  galeria.appendChild(caja);
-  const im = new Image();
-  im.onload = () => { caja.textContent = ""; caja.classList.add("ok"); im.alt = item.texto; caja.appendChild(im); };
+  const fig = document.createElement("figure");
+  fig.className = "shot " + item.area;
+  const im = new Image(item.ancho, item.alto);
+  im.loading = "lazy";
+  im.decoding = "async";
   im.src = item.archivo;
+  im.dataset.i18nAlt = item.texto;
+  const cap = document.createElement("figcaption");
+  cap.dataset.i18n = item.texto;
+  fig.append(im, cap);
+  galeria.appendChild(fig);
 });
 
 /* ---------- Formulario: valida y abre WhatsApp ---------- */
 const form = document.getElementById("form");
 const error = document.getElementById("error");
-const MODELOS = ["Tiggo 2 Pro Max", "Tiggo 4", "Otro modelo"];
+const MODELOS = ["Tiggo 2 Pro Max", "Tiggo 4", "otro"];
 
 form.addEventListener("submit", e => {
   e.preventDefault();
-  const nombre = form.nombre.value.trim().slice(0, 60);
+  const nombre = form.nombre.value.replace(/[\u0000-\u001f\u007f<>]/g, "").trim().slice(0, 60);
   const modelo = MODELOS.includes(form.modelo.value) ? form.modelo.value : MODELOS[0];
-  const mensaje = form.mensaje.value.trim().slice(0, 300);
+  const mensaje = form.mensaje.value.replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, "").trim().slice(0, 300);
 
-  if (nombre.length < 2) { error.textContent = "Escribe tu nombre, por favor."; return; }
-  if (!numeroValido)     { error.textContent = "El número de WhatsApp aún no está configurado."; return; }
+  if (nombre.length < 2) { error.textContent = t("errNombre"); form.nombre.focus(); return; }
+  if (!numeroValido)     { error.textContent = t("errNumero"); return; }
   error.textContent = "";
 
-  const texto = "Hola Denise, soy " + nombre + ". Me interesa el " + modelo + "." + (mensaje ? " " + mensaje : "");
+  const base = modelo === "otro" ? t("msgFormOtro") : t("msgForm").replace("{modelo}", modelo);
+  const texto = base.replace("{nombre}", nombre) + (mensaje ? " " + mensaje : "");
   window.open(linkWA(texto), "_blank", "noopener,noreferrer");
 });
+
+/* ---------- Idioma ---------- */
+document.addEventListener("idioma-cambiado", () => {
+  actualizarEnlacesWA();
+  error.textContent = "";
+  frames.forEach((f, i) => { f.alt = t("angulo") + " " + (i + 1); });
+  const badge = viewer.querySelector(".badge3d");
+  if (badge) badge.textContent = t("badge3d");
+});
+window.I18N.aplicar();

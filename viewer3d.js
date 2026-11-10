@@ -2,7 +2,7 @@
    Modelo hecho con formas simples; NO es el carro real. */
 import * as THREE from "./vendor/three.module.min.js";
 
-export function iniciar3D(contenedor, slider, placeholder) {
+export function iniciar3D(contenedor, slider, placeholder, textoEtiqueta) {
   let renderer;
   try {
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -207,7 +207,7 @@ export function iniciar3D(contenedor, slider, placeholder) {
   /* Etiqueta para que quede claro que es ilustrativo */
   const etiqueta = document.createElement("div");
   etiqueta.className = "badge3d";
-  etiqueta.textContent = "Modelo 3D ilustrativo · el 360° con fotos reales llega pronto";
+  etiqueta.textContent = textoEtiqueta || "Modelo 3D ilustrativo, no es el carro real.";
   contenedor.appendChild(etiqueta);
   return true;
 }
