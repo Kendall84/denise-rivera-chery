@@ -1,0 +1,185 @@
+{
+  "_nota": "BORRADOR Fase 0. Datos tomados solo de las fichas técnicas de Grupo Coricar. Sin precios. 'Según versión' donde la ficha no lo deja claro. En la Fase 1 se agregan las listas completas de equipo por sección.",
+  "pie": "Especificaciones según ficha técnica de Grupo Coricar; pueden variar según versión y disponibilidad. Imágenes de referencia.",
+  "categorias": {
+    "gasolina": "SUV a gasolina",
+    "electrico": "Eléctricos",
+    "hibrido": "Híbrido",
+    "pickup": "Pickup"
+  },
+  "modelos": [
+    {
+      "slug": "tiggo-2-pro-max",
+      "nombre": "Tiggo 2 Pro Max",
+      "categoria": "gasolina",
+      "tipo": "SUV compacto",
+      "garantia": { "motor": "10 años o 1.000.000 km", "vehiculo": "5 años o 150.000 km" },
+      "colores": ["Gris oscuro", "Gris claro", "Blanco", "Negro"],
+      "pasajeros": 5,
+      "dimensiones": { "largo": 4200, "ancho": 1760, "alto": 1570, "entre_ejes": 2555, "maletero_l": 320 },
+      "versiones": [
+        { "nombre": "MT LUX", "motor": "1.5 L ACTECO", "transmision": "Manual 5 velocidades", "potencia": "105 hp a 6000 rpm", "torque": "133 Nm a 2750 rpm", "pantalla": "9\"", "cluster": "3.5\"" },
+        { "nombre": "AT LUX", "motor": "1.5 L ACTECO", "transmision": "CVT", "potencia": "105 hp a 6000 rpm", "torque": "133 Nm a 2750 rpm", "pantalla": "10.25\" flotante", "cluster": "3.5\"" }
+      ],
+      "solo_en": {
+        "AT LUX": ["Botón de encendido keyless", "Pantalla táctil flotante", "Cargador inalámbrico", "Puerto USB tipo C delantero"]
+      },
+      "destacados": ["Garantía de motor de 10 años", "Airbags delanteros y laterales", "Cámara de retroceso", "Apple CarPlay y Android Auto", "Aros de 16\""],
+      "imagenes": { "hero": "t2/x-001-000", "galeria": ["t2/x-003-005", "t2/x-003-002"] }
+    },
+    {
+      "slug": "tiggo-4",
+      "nombre": "Tiggo 4",
+      "categoria": "gasolina",
+      "tipo": "SUV",
+      "garantia": { "motor": "10 años o 1.000.000 km", "vehiculo": "5 años o 150.000 km" },
+      "colores": ["Gris oscuro", "Negro", "Blanco", "Gris claro"],
+      "pasajeros": 5,
+      "dimensiones": { "largo": 4320, "ancho": 1831, "alto": 1653, "entre_ejes": 2611 },
+      "versiones": [
+        { "nombre": "LUX", "motor": "1.5 L ACTECO", "transmision": "CVT", "potencia": "115 hp", "torque": "139 Nm", "aros": "17\" (215/60 R17)" },
+        { "nombre": "TURBO", "motor": "1.5 L Turbo", "transmision": "CVT", "potencia": "147 hp", "torque": "210 Nm", "aros": "18\" (215/55 R18)" }
+      ],
+      "solo_en": { "TURBO": ["Cámara 360°", "Cargador inalámbrico"] },
+      "destacados": ["5 estrellas A-NCAP", "6 airbags", "Pantalla flotante de 10.25\"", "Pantalla total flotante de 20.5\"", "Freno de mano electrónico con Autohold", "6 parlantes"],
+      "imagenes": { "hero": "t4/frente-con-texto", "galeria": [] }
+    },
+    {
+      "slug": "tiggo-7-pro-2027",
+      "nombre": "Tiggo 7 Pro 2027",
+      "categoria": "gasolina",
+      "tipo": "SUV mediano",
+      "garantia": { "motor": "10 años o 1.000.000 km", "vehiculo": "5 años o 150.000 km" },
+      "colores": [],
+      "pasajeros": 5,
+      "dimensiones": { "largo": 4500, "ancho": 1842, "alto": 1705, "entre_ejes": 2670 },
+      "versiones": [
+        { "nombre": "SPORT", "motor": "1.5 T", "transmision": "CVT", "traccion": "Delantera", "aros": "18\"", "parlantes": "6" },
+        { "nombre": "PREMIUM", "motor": "1.5 T", "transmision": "CVT", "traccion": "Delantera", "aros": "18\"", "parlantes": "8 SONY" }
+      ],
+      "solo_en": {
+        "PREMIUM": ["Full ADAS (LDW, DOW, BSD, RCW, RTA, LCA, FCW, AEB, control crucero adaptativo)", "Cámara panorámica HD 360°", "Sensores delanteros", "Sunroof panorámico", "Asientos delanteros eléctricos con ventilación y calefacción", "Carga inalámbrica 50 W", "Portón trasero eléctrico con sensor", "Luz ambiental multicolor", "Vidrios tintados para privacidad"]
+      },
+      "destacados": ["5 estrellas A-NCAP", "6 airbags", "Pantalla continua flotante de 24.6\"", "A/C automático de doble zona con filtro N95", "Freno electrónico con Autohold"],
+      "imagenes": { "hero": "t7/x-001-000", "galeria": ["t7/x-004-001", "t7/x-004-007", "t7/x-004-006", "t7/x-004-004", "t7/x-004-003"] }
+    },
+    {
+      "slug": "tiggo-8-pro",
+      "nombre": "Tiggo 8 Pro",
+      "categoria": "gasolina",
+      "tipo": "SUV de 7 asientos",
+      "garantia": { "motor": "10 años o 1.000.000 km", "vehiculo": "5 años o 150.000 km" },
+      "colores": [],
+      "pasajeros": 7,
+      "dimensiones": { "largo": 4722, "ancho": 1860, "alto": 1765, "entre_ejes": 2710 },
+      "versiones": [
+        { "nombre": "CHAMPION", "motor": "1.5 T", "transmision": "6 DCT", "emisiones": "Euro 5+", "pantalla": "10.25\"", "cluster": "7\"", "parlantes": "4", "aros": "18\" color uniforme" },
+        { "nombre": "LUX", "motor": "1.6 TGDI", "transmision": "7 DCT", "emisiones": "Euro 6B", "pantalla": "12.3\" (flotante total 24.6\")", "cluster": "12.3\"", "parlantes": "8 Sony", "aros": "18\" bitono" }
+      ],
+      "solo_en": {
+        "LUX": ["ADAS: ACC, FCW, AEB, BSD, RCTA/LCA, DOW, LDW, LKA, TJA, ICA, luces altas inteligentes", "HUD", "Cámara panorámica HD 540°", "Sensores delanteros", "Techo panorámico", "Asientos delanteros eléctricos con calefacción", "A/C independiente para tercera fila", "Portón eléctrico por inducción", "Carga inalámbrica"]
+      },
+      "destacados": ["7 asientos (2+3+2)", "5 estrellas de seguridad", "6 airbags", "A/C automático de dos zonas", "Encendido a distancia"],
+      "imagenes": { "hero": "t8/x-001-000", "galeria": ["t8/x-004-006", "t8/x-003-001", "t8/x-004-005"] }
+    },
+    {
+      "slug": "chery-q",
+      "nombre": "Chery Q Full ADAS 420",
+      "categoria": "electrico",
+      "tipo": "Eléctrico urbano",
+      "garantia": null,
+      "colores": [],
+      "pasajeros": "Según versión",
+      "dimensiones": { "largo": 4195, "ancho": 1811, "alto": 1573, "entre_ejes": 2700, "peso_kg": 1280, "maletero_l": "70 L delantero + 375–1450 L trasero" },
+      "versiones": [
+        { "nombre": "Full ADAS 420", "autonomia": "420 km CLTC", "bateria": "41.278 kWh LFP", "potencia": "90 kW", "torque": "115 Nm", "traccion": "Trasera", "carga_rapida": "30–80 % en 21 min (DC 60 kW)", "carga_ac": "6.6 kW", "v2l": "6.6 kW", "aros": "17\" (205/55 R17)" }
+      ],
+      "destacados": ["Full ADAS de 15 funciones", "6 airbags", "Cámara 540° con chasis transparente", "Pantalla 15.6\" 2.5K con Snapdragon 8155", "Carga inalámbrica 50 W", "Asiento del conductor ventilado y calefactado"],
+      "imagenes": { "hero": "q/x-001-000", "galeria": ["q/x-003-001", "q/x-004-003"] }
+    },
+    {
+      "slug": "icaur-v23",
+      "nombre": "iCAUR V23",
+      "categoria": "electrico",
+      "tipo": "SUV 100 % eléctrico",
+      "garantia": null,
+      "colores": ["Orange", "Gray", "White", "Green", "Silver", "Black"],
+      "pasajeros": 5,
+      "dimensiones": { "largo": 4220, "ancho": 1915, "alto": 1845, "entre_ejes": 2735 },
+      "versiones": [
+        { "nombre": "2WD 401", "autonomia": "401 km CLTC", "bateria": "59.93 kWh", "potencia": "134 hp / 100 kW", "torque": "180 Nm", "carga_rapida": "20–80 % en 36 min" },
+        { "nombre": "4WD 501", "autonomia": "501 km CLTC", "bateria": "81.8 kWh", "potencia": "208 hp / 155 kW", "torque": "292 Nm", "carga_rapida": "20–80 % en 42 min" }
+      ],
+      "destacados": ["V2L", "Carga CCS2", "Pantalla 15.4\"", "7 parlantes", "Sensores delanteros y traseros", "Aros 255/55 R19"],
+      "imagenes": { "hero": "v23/x-001-000", "galeria": ["v23/x-005-013", "v23/x-003-008", "v23/x-003-009", "v23/x-002-004", "v23/x-003-006"] }
+    },
+    {
+      "slug": "icaur-v27",
+      "nombre": "iCAUR V27",
+      "categoria": "hibrido",
+      "tipo": "SUV eléctrico de rango extendido (REEV)",
+      "garantia": null,
+      "colores": [],
+      "pasajeros": 5,
+      "dimensiones": { "largo": 5045, "ancho": 1976, "alto": 1894, "entre_ejes": 2900 },
+      "versiones": [
+        { "nombre": "2WD", "potencia": "382 hp", "torque": "520 Nm", "aceleracion": "0–100 en 9 s", "autonomia_electrica": "95 km NEDC", "bateria": "20.47 kWh", "aros": "255/55 R19", "airbags": "6", "parlantes": "8" },
+        { "nombre": "4WD", "potencia": "583 hp", "torque": "805 Nm", "aceleracion": "0–100 en 5.5 s", "autonomia_electrica": "150 km NEDC", "bateria": "34.31 kWh", "aros": "265/45 R21", "airbags": "7", "parlantes": "15 + subwoofer" }
+      ],
+      "solo_en": { "4WD": ["Techo panorámico Dual SkyView", "Luz ambiental multicolor", "Memoria del asiento del conductor", "Remolque habilitado"] },
+      "destacados": ["Autonomía combinada de 1000 km (NEDC)", "Generador 1.5 L turbo", "ULTRA ADAS de 17 funciones", "Cámara 540°", "5 estrellas de seguridad", "Pantalla 15.4\""],
+      "imagenes": { "hero": "v27/x-001-000", "galeria": ["v27/x-005-008", "v27/x-003-004", "v27/x-005-009", "v27/x-004-006", "v27/x-004-007"] }
+    },
+    {
+      "slug": "icar-03",
+      "nombre": "iCAR 03",
+      "categoria": "electrico",
+      "tipo": "SUV eléctrico",
+      "garantia": null,
+      "colores": ["Blanco", "Negro", "Gris oscuro", "Gris", "Verde"],
+      "pasajeros": "Según versión",
+      "dimensiones": { "entre_ejes": 2715 },
+      "versiones": [
+        { "nombre": "LUX 2WD 401", "autonomia": "401 km CLTC", "bateria": "50.63 kWh", "potencia": "135 kW", "torque": "220 Nm", "aceleracion": "0–100 en 10 s", "aros": "18\"", "parlantes": "8" },
+        { "nombre": "Flagship 4WD 501", "autonomia": "501 km CLTC", "bateria": "69.77 kWh", "potencia": "205 kW", "torque": "385 Nm", "aceleracion": "0–100 en 6.5 s", "aros": "19\"", "parlantes": "12 Infinity" }
+      ],
+      "solo_en": { "Flagship 4WD 501": ["ADAS: ACC, ICA, FCW, AEB, LDW, LKA, TJA, DOW, RCTA, BSD, ELK, DAI", "Airbags de cortina", "Asiento del acompañante eléctrico", "Calefacción en asientos y volante", "Memoria del asiento"] },
+      "destacados": ["Carga DC en 30 min", "Cámara 540°", "Pantalla 15.6\"", "Panel digital 9.2\"", "Carga inalámbrica", "Luz ambiente de 64 colores"],
+      "imagenes": { "hero": "i03/x-001-000", "galeria": ["i03/x-004-006"] }
+    },
+    {
+      "slug": "icar-03-expedition",
+      "nombre": "iCAR 03 Expedition",
+      "categoria": "electrico",
+      "tipo": "SUV eléctrico todoterreno",
+      "garantia": null,
+      "colores": ["Blanco", "Negro", "Gris oscuro", "Gris", "Verde"],
+      "pasajeros": 5,
+      "dimensiones": { "largo": 4342, "ancho": 1930, "alto": 1741, "entre_ejes": 2715, "maletero_l": 264 },
+      "versiones": [
+        { "nombre": "Expedition 2WD", "autonomia": "501 km CLTC", "bateria": "65.69 kWh", "potencia": "181 hp", "torque": "220 Nm", "aceleracion": "0–100 en 10.5 s", "parlantes": "8 Pioneer" },
+        { "nombre": "Expedition 4WD", "autonomia": "501 km CLTC", "bateria": "69.77 kWh", "potencia": "275 hp", "torque": "385 Nm", "aceleracion": "0–100 en 6.5 s", "parlantes": "12 Infinity" }
+      ],
+      "solo_en": { "Expedition 4WD": ["Asientos delanteros calefactados", "Asiento con masaje (piloto)", "Ventilación en toda la fila delantera"] },
+      "destacados": ["Cámara 360° con transparencia de carrocería", "ADAS de 14 tipos", "6 airbags", "Sunroof panorámico", "Aros 19\"", "Carga DC 80 kW (30–80 % en 0.5 h)"],
+      "imagenes": { "hero": "i03e/x-001-001", "galeria": ["i03e/x-005-012", "i03e/x-003-008"] }
+    },
+    {
+      "slug": "himla",
+      "nombre": "HIMLA",
+      "categoria": "pickup",
+      "tipo": "Pickup diésel 4x4",
+      "garantia": { "vehiculo": "5 años o 150.000 km" },
+      "colores": ["Blanco", "Negro", "Gris oscuro", "Rojo"],
+      "pasajeros": 5,
+      "dimensiones": { "largo": 5335, "ancho": 1920, "alto": 1890, "entre_ejes": 3230, "cajon": "1530 × 1620 × 515 mm" },
+      "versiones": [
+        { "nombre": "LUX MT", "motor": "2.3 TDI M9T (Nissan)", "transmision": "Manual 6 velocidades", "potencia": "161 hp", "torque": "420 Nm", "traccion": "4WD", "aros": "17\"", "asientos": "Tela", "parlantes": "4" },
+        { "nombre": "PREMIUM AT", "motor": "2.3 TDI M9T (Nissan)", "transmision": "Automática 8 velocidades", "potencia": "161 hp", "torque": "420 Nm", "traccion": "4WD", "aros": "18\"", "asientos": "Cuero", "parlantes": "6" }
+      ],
+      "solo_en": { "PREMIUM AT": ["Cámara 360°", "Asientos delanteros con calefacción", "Asiento del conductor eléctrico", "Cluster digital", "Carga inalámbrica", "Retrovisores plegables eléctricos"] },
+      "destacados": ["Capacidad de carga 1000 kg", "Remolque 3000 kg", "7 airbags", "5 estrellas de seguridad", "Pantalla 12.3\"", "Garantía de 5 años"],
+      "imagenes": { "hero": "himla/x-005-009", "galeria": ["himla/x-003-001", "himla/x-004-007", "himla/x-001-000"] }
+    }
+  ]
+}
