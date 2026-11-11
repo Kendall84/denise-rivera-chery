@@ -13,7 +13,7 @@ const DENISE = {
   experiencia: { es: "10 años · más de 1000 autos vendidos", en: "10 years · over 1,000 cars sold" },
   redes: { facebook: "", instagram: "", tiktok: "" },
   testimonios: [
-    { nombre: "Estefanía Rojas", texto: { es: "Excelente atención desde el primer momento. Me ayudaron a encontrar el carro que buscaba y todo el proceso fue muy claro y rápido. Estoy muy agradecido por el servicio.", en: "Excellent service from the very first moment. They helped me find the car I was looking for, and the whole process was clear and quick. I'm very grateful for the service." } },
+    { nombre: "Estefanía Rojas", texto: { es: "Excelente atención desde el primer momento. Me ayudaron a encontrar el carro que buscaba y todo el proceso fue muy claro y rápido. Estoy muy agradecida por el servicio.", en: "Excellent service from the very first moment. They helped me find the car I was looking for, and the whole process was clear and quick. I'm very grateful for the service." } },
     { nombre: "Carlos Camacho", texto: { es: "Muy buena experiencia de compra. Recibí un trato amable, me explicaron todos los detalles del vehículo y me dieron mucha confianza. ¡Estoy feliz con mi carro nuevo!", en: "A great buying experience. I was treated kindly, they explained every detail of the vehicle and gave me a lot of confidence. I'm happy with my new car!" } },
     { nombre: "Nelson Otárola", texto: { es: "Quiero agradecer por la excelente atención y el acompañamiento durante todo el proceso. Encontré exactamente lo que necesitaba. Sin duda, recomiendo el servicio.", en: "I want to say thanks for the excellent service and support throughout the whole process. I found exactly what I needed. I definitely recommend the service." } }
   ]
