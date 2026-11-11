@@ -12,7 +12,11 @@ const DENISE = {
   horario: { es: "9:00 a. m. a 6:00 p. m.", en: "9:00 a.m. to 6:00 p.m." },
   experiencia: { es: "10 años · más de 1000 autos vendidos", en: "10 years · over 1,000 cars sold" },
   redes: { facebook: "", instagram: "", tiktok: "" },
-  testimonios: []
+  testimonios: [
+    { nombre: "Estefanía Rojas", texto: { es: "Excelente atención desde el primer momento. Me ayudaron a encontrar el carro que buscaba y todo el proceso fue muy claro y rápido. Estoy muy agradecido por el servicio.", en: "Excellent service from the very first moment. They helped me find the car I was looking for, and the whole process was clear and quick. I'm very grateful for the service." } },
+    { nombre: "Carlos Camacho", texto: { es: "Muy buena experiencia de compra. Recibí un trato amable, me explicaron todos los detalles del vehículo y me dieron mucha confianza. ¡Estoy feliz con mi carro nuevo!", en: "A great buying experience. I was treated kindly, they explained every detail of the vehicle and gave me a lot of confidence. I'm happy with my new car!" } },
+    { nombre: "Nelson Otárola", texto: { es: "Quiero agradecer por la excelente atención y el acompañamiento durante todo el proceso. Encontré exactamente lo que necesitaba. Sin duda, recomiendo el servicio.", en: "I want to say thanks for the excellent service and support throughout the whole process. I found exactly what I needed. I definitely recommend the service." } }
+  ]
 };
 /* =============================================================================== */
 
@@ -172,9 +176,11 @@ const App = (function () {
       lista.textContent = "";
       datos.forEach(x => {
         const f = el("figure", "testimonio");
+        const estrellas = el("span", "estrellas", "★★★★★");
+        estrellas.setAttribute("role", "img"); estrellas.setAttribute("aria-label", t("cincoEstrellas"));
         const q = el("blockquote", null, tx(x.texto));
         const c = el("figcaption", null, x.nombre + (x.modelo ? " · " + x.modelo : ""));
-        f.append(q, c); lista.appendChild(f);
+        f.append(estrellas, q, c); lista.appendChild(f);
       });
     };
     pintar();

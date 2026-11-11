@@ -220,7 +220,7 @@ button { font: inherit; color: inherit; }
 .testimonios { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
 .testimonio { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 12px; }
 .testimonio blockquote { margin: 0; font-size: 1.02rem; }
-.testimonio blockquote::before { content: "“"; display: block; font: 700 2.4rem/0.8 var(--head); color: var(--red-text); }
+.estrellas { color: #f5c04a; letter-spacing: .12em; font-size: 18px; }
 .testimonio figcaption { color: var(--muted); font-size: 14px; font-weight: 600; }
 
 /* ---------- Pasos ---------- */
