@@ -1,13 +1,18 @@
 /* ============ CONFIGURACIÓN DE DENISE (lo único que hay que editar) ============
    whatsapp:    número con código de país, sin + ni espacios. Costa Rica = 506 + 8 dígitos.
    foto:        ruta a la foto, por ejemplo "img/denise/denise.webp". Vacío = se muestran sus iniciales.
-   zona, horario, experiencia: texto en español e inglés. Vacío = no se muestra.          */
+   zona, horario, experiencia: texto en español e inglés. Vacío = no se muestra.
+   redes:       enlaces completos (https://...). Vacío = no se muestra ese botón.
+   testimonios: SOLO reseñas reales de clientes, con su permiso. Lista vacía = la sección no aparece.
+                Ejemplo: { nombre: "María G.", modelo: "Tiggo 4", texto: { es: "…", en: "…" } }   */
 const DENISE = {
-  whatsapp: "506XXXXXXXX",
+  whatsapp: "50661569164",
   foto: "",
   zona: { es: "", en: "" },
-  horario: { es: "", en: "" },
-  experiencia: { es: "", en: "" }
+  horario: { es: "9:00 a. m. a 6:00 p. m.", en: "9:00 a.m. to 6:00 p.m." },
+  experiencia: { es: "10 años · más de 1000 autos vendidos", en: "10 years · over 1,000 cars sold" },
+  redes: { facebook: "", instagram: "", tiktok: "" },
+  testimonios: []
 };
 /* =============================================================================== */
 
@@ -133,6 +138,44 @@ const App = (function () {
         const d = el("div"); d.append(el("dt", null, t(k)), el("dd", null, val)); lista.appendChild(d);
       });
       lista.hidden = !lista.children.length;
+    };
+    pintar();
+    document.addEventListener("idioma-cambiado", pintar);
+    iniciarRedes();
+    iniciarTestimonios();
+  }
+
+  /* Redes: solo enlaces https completos */
+  function iniciarRedes() {
+    const NOMBRES = { facebook: "Facebook", instagram: "Instagram", tiktok: "TikTok" };
+    const redes = Object.keys(NOMBRES).filter(k => /^https:\/\/[^\s"<>]+$/.test((DENISE.redes || {})[k] || ""));
+    document.querySelectorAll("[data-redes]").forEach(c => {
+      c.textContent = "";
+      redes.forEach(k => {
+        const a = el("a", "btn btn-sm btn-ghost", NOMBRES[k]);
+        a.href = DENISE.redes[k]; a.target = "_blank"; a.rel = "noopener noreferrer";
+        c.appendChild(a);
+      });
+      const bloque = c.closest("[data-redes-bloque]") || c;
+      bloque.hidden = !redes.length;
+    });
+  }
+
+  /* Testimonios: la sección se oculta mientras no haya reseñas reales */
+  function iniciarTestimonios() {
+    const sec = document.getElementById("opiniones");
+    const lista = document.getElementById("testimonios");
+    if (!sec || !lista) return;
+    const datos = (DENISE.testimonios || []).filter(x => x && x.nombre && x.texto);
+    sec.hidden = !datos.length;
+    const pintar = () => {
+      lista.textContent = "";
+      datos.forEach(x => {
+        const f = el("figure", "testimonio");
+        const q = el("blockquote", null, tx(x.texto));
+        const c = el("figcaption", null, x.nombre + (x.modelo ? " · " + x.modelo : ""));
+        f.append(q, c); lista.appendChild(f);
+      });
     };
     pintar();
     document.addEventListener("idioma-cambiado", pintar);
